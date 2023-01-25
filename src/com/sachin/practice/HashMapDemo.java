@@ -13,7 +13,15 @@ public class HashMapDemo {
 		map.put(102, 2000);
 		map.put(103, 3000);
 		
-		System.out.println(map);
+		Iterator<Entry<Integer, Integer>> itr = map.entrySet().iterator();
+		
+		while (itr.hasNext()) {
+					
+			Entry<Integer, Integer> next = itr.next();
+			
+			Integer key = next.getKey();
+			System.out.println(next.getKey());
+			System.out.println(next.getValue());
 	}
 
 }
